@@ -2,6 +2,14 @@ import '@testing-library/jest-dom/vitest'
 import { vi } from 'vitest'
 import React from 'react'
 
+// IntersectionObserver is not available in jsdom — stub it so framer-motion whileInView works
+global.IntersectionObserver = class {
+  constructor() {}
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+}
+
 vi.mock('@react-three/fiber', () => ({
   Canvas: ({ children }) => React.createElement('div', { 'data-testid': 'r3f-canvas' }, children),
   useFrame: vi.fn(),
