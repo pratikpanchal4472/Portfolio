@@ -39,10 +39,6 @@ export default function Contact() {
             <span>📍</span>
             <span>{personal.location}</span>
           </div>
-          <div className="flex items-center gap-3 text-slate-400 text-base">
-            <span>📱</span>
-            <span>{personal.phone}</span>
-          </div>
         </div>
       </motion.div>
     </div>

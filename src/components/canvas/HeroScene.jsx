@@ -38,8 +38,8 @@ export default function HeroScene() {
 
       {heroTechCards.map((card) => (
         <Float key={card.label} speed={1.5} rotationIntensity={0.3} floatIntensity={0.6}>
-          <mesh position={card.position}>
-            <boxGeometry args={[1.2, 0.65, 0.08]} />
+          <mesh position={card.position} rotation={[Math.PI / 2, Math.PI / 6, 0]}>
+            <cylinderGeometry args={[0.55, 0.55, 0.1, 6]} />
             <meshStandardMaterial
               color={card.color}
               emissive={card.color}
@@ -51,11 +51,12 @@ export default function HeroScene() {
             />
           </mesh>
           <Text
-            position={[card.position[0], card.position[1], card.position[2] + 0.06]}
-            fontSize={0.18}
+            position={[card.position[0], card.position[1], card.position[2] + 0.1]}
+            fontSize={card.label.length > 8 ? 0.13 : 0.17}
             color="#ffffff"
             anchorX="center"
             anchorY="middle"
+            maxWidth={0.9}
           >
             {card.label}
           </Text>

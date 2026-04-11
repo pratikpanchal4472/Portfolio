@@ -22,7 +22,7 @@ export const skills = [
   {
     category: 'Cloud & ML',
     color: '#60a5fa',
-    items: ['AWS Clean Rooms', 'SageMaker', 'EKS', 'MSK', 'Glue', 'Redshift', 'Bedrock', 'Lambda', 'CDK', 'Terraform', 'Supabase'],
+    items: ['AWS Clean Rooms', 'SageMaker', 'EKS', 'MSK', 'Glue', 'Redshift', 'Bedrock', 'Lambda', 'CDK', 'Terraform'],
   },
   {
     category: 'Data Engineering',
@@ -37,7 +37,7 @@ export const skills = [
   {
     category: 'Backend',
     color: '#60a5fa',
-    items: ['Java', 'Spring Boot', 'Python', 'FastAPI', 'Go (Gin)', 'Node.js', 'Microservices', 'Event-Driven Architecture'],
+    items: ['Java', 'Spring Boot', 'Python', 'FastAPI', 'Go (Gin)', 'Node.js', 'Supabase', 'Microservices', 'Event-Driven Architecture'],
   },
   {
     category: 'Frontend',
@@ -177,5 +177,7 @@ export const heroTechCards = [
   { label: 'K8s',    color: '#326CE5', position: [ 0.5,  2.8, -2.8] },
   { label: 'React',  color: '#61DAFB', position: [-3.5,  0.2, -1.5] },
   { label: 'Python', color: '#FFD43B', position: [ 1.8, -2.5, -2.0] },
-  { label: 'Go',     color: '#00ACD7', position: [-1.0,  2.5, -3.2] },
+  { label: 'Go',          color: '#00ACD7', position: [-1.0,  2.5, -3.2] },
+  { label: 'Java',        color: '#f89820', position: [ 2.5,  0.8, -1.8] },
+  { label: 'Spring Boot', color: '#6db33f', position: [-2.8,  2.2, -3.0] },
 ]
