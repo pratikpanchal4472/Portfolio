@@ -13,7 +13,7 @@ export default defineConfig({
       exclude: [
         'node_modules/**',
         'src/test/**',
-        'src/components/canvas/**',
+        'src/components/background/**',
         '**/*.config.js',
         'src/main.jsx',
       ],

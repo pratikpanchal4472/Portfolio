@@ -1,7 +1,6 @@
-import { useRef, useEffect } from 'react'
-import useSceneStore from './store/sceneStore'
+import { useRef } from 'react'
 import useScrollSection from './hooks/useScrollSection'
-import Scene from './components/canvas/Scene'
+import SplashCursor from './components/background/SplashCursor'
 import DotNav from './components/ui/DotNav'
 import Navbar from './components/ui/Navbar'
 import Hero from './components/sections/Hero'
@@ -13,7 +12,6 @@ import Certifications from './components/sections/Certifications'
 import Contact from './components/sections/Contact'
 
 export default function App() {
-  // Declare all refs at top-level to satisfy Rules of Hooks
   const ref0 = useRef(null)
   const ref1 = useRef(null)
   const ref2 = useRef(null)
@@ -25,22 +23,16 @@ export default function App() {
 
   useScrollSection(sectionRefs)
 
-  const setMousePos = useSceneStore((s) => s.setMousePos)
-
-  useEffect(() => {
-    const handler = (e) => {
-      setMousePos({
-        x: (e.clientX / window.innerWidth - 0.5) * 2,
-        y: (e.clientY / window.innerHeight - 0.5) * 2,
-      })
-    }
-    window.addEventListener('mousemove', handler)
-    return () => window.removeEventListener('mousemove', handler)
-  }, [setMousePos])
-
   return (
     <>
-      <Scene />
+      <SplashCursor
+        SIM_RESOLUTION={160}
+        DYE_RESOLUTION={1664}
+        PRESSURE={0.3}
+        CURL={6}
+        SPLAT_RADIUS={0.4}
+        COLOR_UPDATE_SPEED={8}
+      />
       <Navbar />
       <DotNav />
       <div id="scroll-container">
