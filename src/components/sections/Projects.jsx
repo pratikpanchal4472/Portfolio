@@ -22,9 +22,14 @@ export default function Projects() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="bg-slate-800/65 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 hover:-translate-y-0.5 transition-all duration-200"
+              className="flex flex-col bg-slate-800/65 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 hover:-translate-y-0.5 transition-all duration-200"
             >
-              <div className="flex flex-wrap gap-1.5 mb-3">
+              <h3 className="text-white font-semibold text-sm mb-2 leading-snug">{p.title}</h3>
+              <div className="text-xs font-mono mb-3 leading-snug" style={{ color: p.color }}>
+                {p.metric}
+              </div>
+              <p className="text-slate-400 text-xs leading-relaxed">{p.description}</p>
+              <div className="flex flex-wrap gap-1.5 mt-4 pt-4 border-t border-slate-700/40">
                 {p.tags.map((tag) => (
                   <span
                     key={tag}
@@ -35,11 +40,6 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-              <h3 className="text-white font-semibold text-sm mb-2 leading-snug">{p.title}</h3>
-              <div className="text-xs font-mono mb-3 leading-snug" style={{ color: p.color }}>
-                {p.metric}
-              </div>
-              <p className="text-slate-400 text-xs leading-relaxed">{p.description}</p>
             </motion.div>
           ))}
         </div>

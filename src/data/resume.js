@@ -22,17 +22,17 @@ export const skills = [
   {
     category: 'Cloud & ML',
     color: '#60a5fa',
-    items: ['AWS Clean Rooms', 'SageMaker', 'EKS', 'MSK', 'Glue', 'Redshift', 'Bedrock', 'Lambda', 'CDK', 'Terraform'],
+    items: ['AWS Clean Rooms', 'SageMaker', 'SageMaker Lakehouse', 'EKS', 'MSK', 'Glue', 'Redshift', 'Bedrock', 'Datazone', 'Lambda', 'CDK', 'Terraform'],
   },
   {
     category: 'Data Engineering',
     color: '#34d399',
-    items: ['Apache Flink', 'Apache Kafka', 'Apache Spark', 'Apache Airflow', 'Temporal', 'Apache Doris', 'dbt', 'ETL/ELT'],
+    items: ['Apache Flink', 'Apache Kafka', 'Apache Spark', 'Apache Airflow', 'Temporal', 'Apache Doris', 'dbt', 'ETL/ELT', 'Zero ETL'],
   },
   {
     category: 'AI/ML & Vectors',
     color: '#a78bfa',
-    items: ['Milvus', 'pgvector', 'HNSW', 'FAISS', 'ONNX', 'PyTorch', 'Semantic Embeddings', 'LLM Integration', 'n8n', 'Spring AI'],
+    items: ['Milvus', 'pgvector', 'HNSW', 'FAISS', 'ONNX', 'PyTorch', 'Semantic Embeddings', 'LLM Integration', 'Bedrock AgentCore', 'Model Context Protocol (MCP)', 'n8n', 'Spring AI'],
   },
   {
     category: 'Backend',
@@ -108,6 +108,14 @@ export const experience = [
 ]
 
 export const projects = [
+  {
+    title: 'DataShift — Natural Query to Analytics Dashboard',
+    tags: ['AWS Bedrock', 'Bedrock AgentCore', 'MCP', 'Datazone', 'SageMaker Lakehouse', 'Zero ETL'],
+    metric: 'AgentCore Accelerator · Semantic agent over lakehouse catalogs',
+    description:
+      'Bedrock AgentCore-powered semantic agent that translates natural-language questions into analytics queries against lakehouse catalogs. MCP tools serve as the backbone of schema discovery across data domains.',
+    color: '#f59e0b',
+  },
   {
     title: 'Privacy-Preserving Identity Resolution',
     tags: ['AWS Clean Rooms', 'SageMaker', 'Milvus', 'EKS'],
