@@ -109,7 +109,7 @@ export const experience = [
 
 export const projects = [
   {
-    title: 'DataShift — Natural Query to Analytics Dashboard',
+    title: 'Axiom — Natural Query to Analytics Dashboard',
     tags: ['AWS Bedrock', 'Bedrock AgentCore', 'MCP', 'Datazone', 'SageMaker Lakehouse', 'Zero ETL'],
     metric: 'AgentCore Accelerator · Semantic agent over lakehouse catalogs',
     description:

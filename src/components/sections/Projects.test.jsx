@@ -10,7 +10,7 @@ describe('Projects', () => {
 
   it('renders all 6 project titles', () => {
     render(<Projects />)
-    expect(screen.getByText('DataShift — Natural Query to Analytics Dashboard')).toBeInTheDocument()
+    expect(screen.getByText('Axiom — Natural Query to Analytics Dashboard')).toBeInTheDocument()
     expect(screen.getByText('Privacy-Preserving Identity Resolution')).toBeInTheDocument()
     expect(screen.getByText('RynoTrax Streaming Modernisation')).toBeInTheDocument()
     expect(screen.getByText('Abstract Security Event Processing')).toBeInTheDocument()
